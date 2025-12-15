@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Área Secreta ❤</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: white;
+  text-align: center;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  width: 220px;
+  font-size: 1em;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background: #ff4d6d;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+#site {
+  display: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div class="container" id="login">
+  <h1>💖 Área Secreta 💖</h1>
+  <p>Digite a senha</p>
+  <input id="senha" type="password" placeholder="Senha">
+  <button onclick="entrar()">Entrar</button>
+  <p id="msg"></p>
+</div>
+
+<!-- SITE -->
+<div class="container" id="site">
+  <h1>Oi, meu amor 💕</h1>
+  <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" width="200">
+  <p>A única pessoa que existe no meu coração é você meu amor ❤</p>
+  <button onclick="alert('Eu te amo mais do que tudo ❤')">
+    Clica aqui
+  </button>
+</div>
+
+<script>
+function entrar() {
+  const senha = document.getElementById("senha").value;
+  const msg = document.getElementById("msg");
+
+  if (senha === "Helloise") {
+    document.getElementById("login").style.display = "none";
+    document.getElementById("site").style.display = "flex";
+  } else {
+    msg.innerText = "Dica: a única pessoa que existe no meu coração ❤";
+  }
+}
+</script>
+
+</body>
+</html>
